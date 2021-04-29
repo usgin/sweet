@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/phenAtmoCloud/> .
 @prefix sophm: <http://sweetontology.net/phenMixing/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -41,7 +42,8 @@
                                                       <http://sweetontology.net/relaSpace> ,
                                                       <http://sweetontology.net/state> ;
                                           rdfs:label "SWEET Ontology Phenomena Atmosphere Cloud" ;
-                                          owl:versionInfo "3.3.0" .
+                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          owl:versionInfo "3.5.0" .
 
 #################################################################
 #    Object Properties
@@ -283,12 +285,19 @@ sophatmoc:Nimbostratus rdf:type owl:Class ;
                    rdfs:subClassOf sophatmoc:Cloud ;
                    rdfs:label "nimbostratus"@en .
 
+###  http://sweetontology.net/phenAtmoCloud/NoctilucentCloud
+sophatmoc:NoctilueentCloud rdf:type owl:Class ;
+                       rdfs:subClassOf sophatmoc:Cloud ;
+                       rdfs:label "noctilucent cloud"@en ;
+                       dcterms:contributor <https://orcid.org/0000-0002-0337-8610> .
 
 ###  http://sweetontology.net/phenAtmoCloud/NoctilueentCloud
 sophatmoc:NoctilueentCloud rdf:type owl:Class ;
                        rdfs:subClassOf sophatmoc:Cloud ;
-                       rdfs:label "noctilueent cloud"@en .
-
+                       rdfs:label "noctilueent cloud"@en ;
+                       owl:deprecated "true"^^xsd:boolean ;
+                       rdfs:seeAlso sophatmoc:NoctilucentCloud ;
+                       dcterms:contributor <https://orcid.org/0000-0002-0337-8610> .
 
 ###  http://sweetontology.net/phenAtmoCloud/OrographicCloud
 sophatmoc:OrographicCloud rdf:type owl:Class ;

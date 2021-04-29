@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/realmHydroBody/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix somas: <http://sweetontology.net/matrSediment/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -18,7 +19,6 @@
 @prefix sostc: <http://sweetontology.net/stateChemical/> .
 @prefix sorea: <http://sweetontology.net/realm/> .
 @prefix sorelsc: <http://sweetontology.net/relaSci/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dct: <http://purl.org/dc/dcmitype/> .
 @base <http://sweetontology.net/realmHydroBody> .
 
@@ -37,7 +37,8 @@
                                                        <http://sweetontology.net/state> ,
                                                        <http://sweetontology.net/stateChemical> ;
                                            rdfs:label "SWEET Ontology Realm Hydrosphere Body" ;
-                                           owl:versionInfo "3.3.0" .
+                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                           owl:versionInfo "3.5.0" .
 
 #################################################################
 #    Object Properties
@@ -211,6 +212,19 @@ soreahb:FreshwaterLake rdf:type owl:Class ;
                                        owl:allValuesFrom somaw:FreshWater
                                      ] ;
                      rdfs:label "freshwater lake"@en .
+
+
+###  http://sweetontology.net/realmHydroBody/HotSpring
+soreahb:HotSpring
+    a owl:Class ;
+    rdfs:subClassOf soreahb:Spring ;
+    skos:prefLabel "hot spring"@en ;
+    skos:altLabel "geothermal spring"@en ;
+    skos:definition  "A hot spring is a spring produced by the emergence of geothermally heated groundwater that rises from the Earth's crust. While some of these springs contain water that is a safe temperature for bathing, others are so hot that immersion can result in injury or death."@en ;
+    dcterms:source <https://en.wikipedia.org/wiki/Hot_spring> ;
+    dcterms:created "2019-07-19"^^xsd:date ;
+    dcterms:creator <http://orcid.org/0000-0001-6238-3498> ;
+.
 
 
 ###  http://sweetontology.net/realmHydroBody/Inlet

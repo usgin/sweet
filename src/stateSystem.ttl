@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/stateSystem/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,15 +18,8 @@
                                                     <http://sweetontology.net/relaSci> ,
                                                     <http://sweetontology.net/state> ;
                                         rdfs:label "SWEET Ontology State System" ;
-                                        owl:versionInfo "3.3.0" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://sweetontology.net/relaSci/moreActiveThan
-sorelsc:moreActiveThan rdf:type owl:AnnotationProperty .
-
+                                        dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                        owl:versionInfo "3.5.0" .
 
 #################################################################
 #    Object Properties
@@ -33,6 +27,10 @@ sorelsc:moreActiveThan rdf:type owl:AnnotationProperty .
 
 ###  http://sweetontology.net/rela/hasState
 sorel:hasState rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaSci/moreActiveThan
+sorelsc:moreActiveThan rdf:type owl:ObjectProperty .
 
 
 #################################################################

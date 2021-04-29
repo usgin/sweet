@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/stateRole/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -19,19 +20,16 @@
                                                   <http://sweetontology.net/rela> ,
                                                   <http://sweetontology.net/relaSci> ;
                                       rdfs:label "SWEET Ontology State Role" ;
-                                      owl:versionInfo "3.3.0" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://sweetontology.net/relaSci/greaterRoleThan
-sorelsc:greaterRoleThan rdf:type owl:AnnotationProperty .
-
+                                      dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                      owl:versionInfo "3.5.0" .
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://sweetontology.net/relaSci/greaterRoleThan
+sorelsc:greaterRoleThan rdf:type owl:ObjectProperty .
+
 
 ###  http://sweetontology.net/rela/hasProcess
 sorel:hasProcess rdf:type owl:ObjectProperty .

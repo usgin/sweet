@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/reprMathGraph/> .
 @prefix sorepsmo: <http://sweetontology.net/reprSciModel/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -17,7 +18,45 @@
                                                       <http://sweetontology.net/reprSciModel> ,
                                                       <http://sweetontology.net/reprSpaceGeometry> ;
                                           rdfs:label "SWEET Ontology Representation Mathematics Graph" ;
-                                          owl:versionInfo "3.3.0" .
+                                          dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                          owl:versionInfo "3.5.0" .
+
+#################################################################
+#    Property declarations added to work around cyclic dependencies
+#################################################################
+
+
+###  http://sweetontology.net/relaMath/eachElementHasType
+sorelm:eachElementHasType rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasArc
+sorelm:hasArc rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasEdge
+sorelm:hasEdge rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasOrderedVertexPair
+sorelm:hasOrderedVertexPair rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasUnorderedVertexPair
+sorelm:hasUnorderedVertexPair rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasVertex
+sorelm:hasVertex rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaMath/hasWeight
+sorelm:hasWeight rdf:type owl:DatatypeProperty .
+
+
+###  http://sweetontology.net/relaMath/hasWeightedEdge
+sorelm:hasWeightedEdge rdf:type owl:ObjectProperty .
+
 
 #################################################################
 #    Classes

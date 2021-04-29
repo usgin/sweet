@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/stateTimeGeologic/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -18,26 +19,31 @@
                                                           <http://sweetontology.net/relaTime> ,
                                                           <http://sweetontology.net/stateTime> ;
                                               rdfs:label "SWEET Ontology State Time Geologic" ;
-                                              owl:versionInfo "3.3.0" .
+                                              dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                              owl:versionInfo "3.5.0" .
 
 #################################################################
-#    Annotation properties
+#    Object properties
 #################################################################
-
-###  http://sweetontology.net/relaMath/hasError
-sorelm:hasError rdf:type owl:AnnotationProperty .
-
 
 ###  http://sweetontology.net/relaTime/hasEndTime
-sorelt:hasEndTime rdf:type owl:AnnotationProperty .
+sorelt:hasEndTime rdf:type owl:ObjectProperty .
 
 
 ###  http://sweetontology.net/relaTime/hasStartTime
-sorelt:hasStartTime rdf:type owl:AnnotationProperty .
+sorelt:hasStartTime rdf:type owl:ObjectProperty .
 
 
 ###  http://sweetontology.net/relaTime/temporalPartOf
-sorelt:temporalPartOf rdf:type owl:AnnotationProperty .
+sorelt:temporalPartOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sweetontology.net/relaMath/hasError
+sorelm:hasError rdf:type owl:DatatypeProperty .
 
 
 #################################################################

@@ -1,5 +1,6 @@
 @prefix : <http://sweetontology.net/reprTimeSeason/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -28,35 +29,28 @@
                                                        <http://sweetontology.net/reprSciUnits> ,
                                                        <http://sweetontology.net/statePhysical> ;
                                            rdfs:label "SWEET Ontology Representation Time Season" ;
-                                           owl:versionInfo "3.3.0" .
-
-#################################################################
-#    Annotation properties
-#################################################################
-
-###  http://sweetontology.net/relaTime/dayOfYear
-sorelt:dayOfYear rdf:type owl:AnnotationProperty .
-
-
-###  http://sweetontology.net/relaTime/hasNHTime
-sorelt:hasNHTime rdf:type owl:AnnotationProperty .
-
-
-###  http://sweetontology.net/relaTime/hasSHTime
-sorelt:hasSHTime rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2006/time#hasBeginning
-owlt:hasBeginning rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2006/time#hasEnd
-owlt:hasEnd rdf:type owl:AnnotationProperty .
-
+                                           dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+                                           owl:versionInfo "3.5.0" .
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.w3.org/2006/time#hasBeginning
+owlt:hasBeginning rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+owlt:hasEnd rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaTime/hasNHTime
+sorelt:hasNHTime rdf:type owl:ObjectProperty .
+
+
+###  http://sweetontology.net/relaTime/hasSHTime
+sorelt:hasSHTime rdf:type owl:ObjectProperty .
+
 
 ###  http://sweetontology.net/rela/hasState
 sorel:hasState rdf:type owl:ObjectProperty .
@@ -72,6 +66,14 @@ sorelm:hasMinimum rdf:type owl:ObjectProperty .
 
 ###  http://sweetontology.net/relaSci/hasUnit
 sorelsc:hasUnit rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data Properties
+#################################################################
+
+###  http://sweetontology.net/relaTime/dayOfYear
+sorelt:dayOfYear rdf:type owl:DatatypeProperty .
 
 
 #################################################################
